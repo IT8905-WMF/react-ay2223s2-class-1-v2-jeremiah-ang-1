@@ -1,6 +1,6 @@
-import Age from "./Practical 4/Age.js";
+import Age from "./Practical 5/Age.js";
 import Hello from "./Practical 2/Hello.js";
-import HobbyList from "./Practical 3/HobbyList.js";
+import HobbyList from "./Practical 4/HobbyList.js";
 import MovieList from "./Practical 4/extra/MovieList.js";
 import TitleLi from "./Practical 4/TitleLi.js";
 const movies = [{

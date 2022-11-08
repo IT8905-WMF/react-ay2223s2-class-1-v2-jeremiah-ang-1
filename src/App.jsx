@@ -1,6 +1,6 @@
-import Age from './Practical 4/Age';
+import Age from './Practical 5/Age';
 import Hello from './Practical 2/Hello';
-import HobbyList from './Practical 3/HobbyList';
+import HobbyList from './Practical 4/HobbyList';
 import MovieList from './Practical 4/extra/MovieList';
 import TitleLi from './Practical 4/TitleLi';
 
