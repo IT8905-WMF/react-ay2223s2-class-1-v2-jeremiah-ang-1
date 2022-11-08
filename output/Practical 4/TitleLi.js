@@ -3,5 +3,5 @@ export default function TitleLi(props) {
     style: {
       textTransform: 'capitalize'
     }
-  }, props.title, ":"), props.text);
+  }, props.title, ":"), !props.isHidden && props.text);
 }

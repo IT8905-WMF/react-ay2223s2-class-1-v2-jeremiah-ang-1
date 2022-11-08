@@ -8,7 +8,7 @@ export default function TitleLi(props) {
             >
                 {props.title}:
             </b>
-            {props.text}
+            {!props.isHidden && props.text}
         </li>
     );
 }
