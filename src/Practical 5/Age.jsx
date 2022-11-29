@@ -1,8 +1,9 @@
+import isEven from 'is-even';
 import TitleLi from '../Practical 5/TitleLi';
 
 export default function Age(props) {
     const [isHidden, setIsHidden] = React.useState(true);
-    const emoji = props.value >= 18 ? '' : '🔞';
+    const emoji = isEven(props.value) ? '' : '🔞';
     return (
         <TitleLi
             title="Age"

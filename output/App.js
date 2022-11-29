@@ -20,7 +20,7 @@ function App(props) {
     title: "name",
     text: "Jeremiah Ang"
   }), /*#__PURE__*/React.createElement(Age, {
-    value: 1
+    value: 21
   }), /*#__PURE__*/React.createElement("li", null, /*#__PURE__*/React.createElement("b", null, "Hobbies:"), /*#__PURE__*/React.createElement("ol", null, /*#__PURE__*/React.createElement(HobbyList, {
     hobbies: [{
       title: 'Swim',

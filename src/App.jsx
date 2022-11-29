@@ -27,7 +27,7 @@ function App(props) {
             <Hello />
             <ol>
                 <TitleLi title="name" text="Jeremiah Ang" />
-                <Age value={1} />
+                <Age value={21} />
                 <li>
                     <b>Hobbies:</b>
                     <ol>
