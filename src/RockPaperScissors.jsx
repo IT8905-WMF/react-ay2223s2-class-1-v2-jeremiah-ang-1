@@ -1,40 +1,44 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
+import { Provider } from 'react-redux';
 
-import RPSButtons from './Practical 9/RPSButtons';
-import RPSRecords from './Practical 9/RPSRecords';
+import RPSButtons from './Practical 10/RPSButtons';
+import RPSRecords from './Practical 10/RPSRecords';
 import RPSInput from './Practical 9/RPSInput';
+import store from './Practical 10/storage';
 
 function RockPaperScissors(props) {
     const [records, setRecords] = React.useState([]);
     return (
-        <div>
-            <h1>Rock Paper Scissors</h1>
-            <RPSButtons
-                onButtonPressed={function (move, forcedResult) {
-                    const randomNumber = Math.random();
-                    let result;
-                    if (randomNumber <= 1 / 3) result = 'Win';
-                    else if (randomNumber <= 2 / 3) result = 'Lose';
-                    else result = 'Draw';
-                    setRecords([...records, { result: forcedResult || result, move: move }]);
-                }}
-                records={records}
-            />
-            <RPSInput
-                onAdd={function (move, result) {
-                    console.log(move, result);
-                    setRecords([...records, { result: result, move: move }]);
-                }}
-            />
-            <RPSRecords
-                records={records}
-                onClickRecord={function (index) {
-                    records[index].deleted = true;
-                    setRecords([...records]);
-                }}
-            />
-        </div>
+        <Provider store={store}>
+            <div>
+                <h1>Rock Paper Scissors</h1>
+                <RPSButtons
+                    onButtonPressed={function (move, forcedResult) {
+                        const randomNumber = Math.random();
+                        let result;
+                        if (randomNumber <= 1 / 3) result = 'Win';
+                        else if (randomNumber <= 2 / 3) result = 'Lose';
+                        else result = 'Draw';
+                        setRecords([...records, { result: forcedResult || result, move: move }]);
+                    }}
+                    records={records}
+                />
+                <RPSInput
+                    onAdd={function (move, result) {
+                        console.log(move, result);
+                        setRecords([...records, { result: result, move: move }]);
+                    }}
+                />
+                <RPSRecords
+                    records={records}
+                    onClickRecord={function (index) {
+                        records[index].deleted = true;
+                        setRecords([...records]);
+                    }}
+                />
+            </div>
+        </Provider>
     );
 }
 
