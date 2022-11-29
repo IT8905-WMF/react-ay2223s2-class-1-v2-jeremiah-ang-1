@@ -1,6 +1,8 @@
-import RPSButtons from "./Practical 7/RPSButtons.js";
-import RPSRecords from "./Practical 7/RPSRecords.js";
-import RPSInput from "./Practical 7/RPSInput.js";
+import React from 'react';
+import ReactDOM from 'react-dom/client';
+import RPSButtons from "./Practical 9/RPSButtons.js";
+import RPSRecords from "./Practical 9/RPSRecords.js";
+import RPSInput from "./Practical 9/RPSInput.js";
 function RockPaperScissors(props) {
   const [records, setRecords] = React.useState([]);
   return /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement("h1", null, "Rock Paper Scissors"), /*#__PURE__*/React.createElement(RPSButtons, {
