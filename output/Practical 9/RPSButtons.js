@@ -7,8 +7,9 @@ export default function RPSButtons(props) {
     return store.record.value;
   });
   const dispatch = useDispatch();
-  return /*#__PURE__*/React.createElement("div", null, moves.map(function (move) {
+  return /*#__PURE__*/React.createElement("div", null, moves.map(function (move, index) {
     return /*#__PURE__*/React.createElement(RPSButton, {
+      key: index,
       records: records.filter(function (record) {
         return !record.deleted && record.move === move;
       }),

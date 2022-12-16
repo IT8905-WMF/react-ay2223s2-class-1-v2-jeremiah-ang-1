@@ -1,8 +1,8 @@
 import Movie from './Movie';
 
 export default function MovieList(props) {
-    return props.movies.map(function (movie) {
-        return <Movie url={movie.url} title={movie.title} rating={movie.rating} />;
+    return props.movies.map(function (movie, index) {
+        return <Movie key={index} url={movie.url} title={movie.title} rating={movie.rating} />;
     });
 }
 

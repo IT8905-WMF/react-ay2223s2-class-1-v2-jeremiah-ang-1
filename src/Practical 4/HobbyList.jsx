@@ -5,7 +5,7 @@ export default function HobbyList(props) {
         .filter(function (hobby) {
             return hobby.emoji;
         })
-        .map(function (hobby) {
-            return <Hobby title={hobby.title} emoji={hobby.emoji} />;
+        .map(function (hobby, index) {
+            return <Hobby key={index} title={hobby.title} emoji={hobby.emoji} />;
         });
 }

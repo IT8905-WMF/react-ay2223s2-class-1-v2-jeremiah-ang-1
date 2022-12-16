@@ -12,9 +12,10 @@ export default function RPSButtons(props) {
 
     return (
         <div>
-            {moves.map(function (move) {
+            {moves.map(function (move, index) {
                 return (
                     <RPSButton
+                        key={index}
                         records={records.filter(function (record) {
                             return !record.deleted && record.move === move;
                         })}

@@ -49,6 +49,3 @@ export default function RockPaperScissors(props) {
         </IsEmojiContext.Provider>
     );
 }
-
-const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(<RockPaperScissors />);

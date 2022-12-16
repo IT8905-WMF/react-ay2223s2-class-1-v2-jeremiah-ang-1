@@ -38,5 +38,3 @@ export default function RockPaperScissors(props) {
     }
   })));
 }
-const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render( /*#__PURE__*/React.createElement(RockPaperScissors, null));

@@ -4,24 +4,17 @@ import HobbyList from '../Practical 4/HobbyList';
 import MovieList from '../Practical 4/extra/MovieList';
 import TitleLi from '../Practical 4/TitleLi';
 
-const movies = [
-    {
-        url: 'https://www.rottentomatoes.com/m/black_adam',
-        title: 'Black Adam',
-        rating: 40,
-    },
-    {
-        url: 'https://www.rottentomatoes.com/m/enola_holmes_2',
-        title: 'Enola Holmes 2',
-        rating: 95,
-    },
-    {
-        url: 'https://www.rottentomatoes.com/m/my_policeman',
-        title: 'My Policeman',
-    },
-];
-
 export default function AboutMe(props) {
+    const [movies, setMovies] = React.useState([]);
+    React.useEffect(function () {
+        fetch('/dist/movies.json')
+            .then(function (response) {
+                return response.json();
+            })
+            .then(function (movies) {
+                setMovies(movies);
+            });
+    }, []);
     return (
         <div>
             <Hello />
