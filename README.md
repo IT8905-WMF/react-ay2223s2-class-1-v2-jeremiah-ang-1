@@ -1,4 +1,4 @@
-# React Assignment
+# React Assignment ---
 
 > This is a boilerplate repository for React Assignments that does not use any bundler such as Webpack/parcel. But simply uses babel for compilation before putting it up for deployment.
 
